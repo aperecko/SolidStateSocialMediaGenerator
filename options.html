@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webhook Options</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body    {
+            min-width:600px;
+        }
+        .inline-checkbox {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+        .webhook-item {
+            margin-bottom: 10px;
+        }
+        #webhookLabel,
+        #webhookUrl {
+            width:96%;
+            margin-bottom:6px;
+            height:24px;
+        }
+        submit  {
+            background:green;
+            color:#fff;
+            font-weight:bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Webhook Configuration</h1>
+    <form id="webhookForm">
+        <input type="text" id="webhookLabel" placeholder="Label" required>
+        <input type="url" id="webhookUrl" placeholder="Webhook URL" required>
+        <div class="inline-checkbox">
+            <input type="checkbox" id="includeUrlCheckbox">
+            <label for="includeUrlCheckbox">Include URL</label>
+            <input type="checkbox" id="showResultCheckbox">
+            <label for="showResultCheckbox">Show Result</label>
+        </div>
+        <button type="submit">Add Webhook</button>
+    </form>
+    <div id="webhookList"></div> <!-- Changed to a div -->
+    <script src="options.js"></script>
+</body>
+</html>
